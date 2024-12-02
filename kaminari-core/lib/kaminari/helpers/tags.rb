@@ -124,7 +124,7 @@ module Kaminari
         # params in Rails 5 may not be a Hash either,
         # so it must be converted to a Hash to be merged into @params
         if params && params.respond_to?(:to_unsafe_h)
-          ActiveSupport::Deprecation.warn 'Explicitly passing params to helpers could be omitted.'
+          ActiveSupport::Deprecation.send(:warn, 'Explicitly passing params to helpers could be omitted.')
           params = params.to_unsafe_h
         end
 
@@ -145,7 +145,7 @@ module Kaminari
         # params in Rails 5 may not be a Hash either,
         # so it must be converted to a Hash to be merged into @params
         if params && params.respond_to?(:to_unsafe_h)
-          ActiveSupport::Deprecation.warn 'Explicitly passing params to helpers could be omitted.'
+          ActiveSupport::Deprecation.send(:warn, 'Explicitly passing params to helpers could be omitted.')
           params = params.to_unsafe_h
         end
 
