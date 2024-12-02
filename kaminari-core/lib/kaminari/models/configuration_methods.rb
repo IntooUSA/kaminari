@@ -52,7 +52,7 @@ module Kaminari
       end
 
       def max_pages_per(val)
-        ActiveSupport::Deprecation.warn 'max_pages_per is deprecated. Use max_pages instead.'
+        ActiveSupport::Deprecation.send(:warn) 'max_pages_per is deprecated. Use max_pages instead.'
         max_pages val
       end
     end
